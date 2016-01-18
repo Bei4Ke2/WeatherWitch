@@ -18,8 +18,8 @@
 
 var weatherToggle = "";
 var longitude = Math.abs(geoplugin_longitude());
-if (longitude <= 98) { var weatherToggle = "4887398"; document.write("Chicago");}
-else {var weatherToggle = "5368361";document.write("Los Angeles"); }
+if (longitude <= 98) { var weatherToggle = "4887398"; var LSTM = 90;  document.write("Chicago");}
+else {var weatherToggle = "5368361"; var LSTM = 120;  document.write("Los Angeles"); }
 
 var xhttp = new XMLHttpRequest();
 xhttp.onreadystatechange = function() {
@@ -59,7 +59,9 @@ var now     = new Date();
 	
 //After I was able to successfully determine the user's location, using their IP address approximation data... Combined with date time, I knew I could get sunrise and sunset backgrounds. However, I wanted to be able to animate this. Which is also why I am working with svgs, instead of pngs here. I digress. After not too much searching I found the sunrise equation, and working backwards, begin to calculate variables. Since I want this done I am abbreviating some of the math and explanations, but, you get it.  First I found the sunrise equation, https://en.wikipedia.org/wiki/Sunrise_equation, which ultimately lead me to the fact I need to know what time Local Solar Noon is, which is in Local Solar Time, thus I need to convert the time I already have. http://pveducation.org/pvcdrom/properties-of-sunlight/suns-position Was where I found the information on Local Solar Times. Ok, now for the fun part.
 
-//Step 1: Calculate LSTM = (15 Degrees) x (deltaT GMT, which is +6 for Chicago, and +8 for LA) 
+//Step 1: Calculate LSTM = (15 Degrees) x (deltaT GMT, which is +6 for Chicago, and +8 for LA) , makes more since later when other variables are assigned anyway. Moved below.
+
+
 //Step 2: Calculate EoT (The big guy, lets deal with him first, since I'm not sure if I need degrees or radians yet) EoT = 9.87 sin(2B) - 7.53 cos(B) - 1.5 sin(B) where B = 360/365 (d-81) and d is the number of days since the start of the year, don't forgt leap years. I saw some code samples, but they were too overwhelming so I had to start from scratch to create a days elapsed I could follow and implement.
 		// I need to know if my current year is a leap year, I read UTC years are more accurate, going with that. The ways of testing are as follows, maybe someone can consolidate, but it works, so, mooving on... 
 		
@@ -116,10 +118,40 @@ var duke = baseDuration - 81;
 var B = 360/365 * (duke);
 alert(B);	
 
-// Given B, EoT = 9.87 sin(2B) - 7.53 cos(B) - 1.5 sin(B) where B = 360/365 (d-81)  Solving for a given B = -62.3924 therefore we can check javascript ability to deal with coefficients now.
+// Given B, EoT = 9.87 sin(2B) - 7.53 cos(B) - 1.5 sin(B) where B = 360/365 (d-81)  Solving for a given B = -62.3924 therefore we can check javascript handling of coefficients now.
 
 var EoT = 9.87 * Math.sin((2*B)) - 7.53 * Math.cos((B)) - 1.5 * Math.sin((B));
 alert(EoT);
+
+
+ 
+<!--Time Correction Factor (TC) The net Time Correction Factor (in minutes) accounts for the variation of the Local Solar Time (LST) within a given time zone due to the longitude variations within the time zone and also incorporates the EoT above. TC = 4 (Longitude - LSTM) + EoT, since longitude is also in degrees, I will leave LSTM in degrees (was a question before, not now)-->
+
+
+var TC = 4 * ( geoplugin_longitude() - LSTM ) + EoT;
+alert (TC + "pass");
+
+//Finally Local Solar Time (LST) can be found by using the previous two corrections to adjust the local time (LT). LST = LT + TC/60
+
+var LST = new Date(now.getTime() + (TC/60)*60000);
+
+alert("LST: " + LST);
+
+//Although I don't need declination angle (I don't think, for my original idea, I am going to do it anyway and maybe print it on the screen Declination Angle = 23.45 degrees sin [ 360/365 (d-81) ] which is basically 23.45 degrees sin (B).
+
+var declinationAngle = 23.45 * Math.sin(B);
+
+alert(delinationAngle);
+
+
+
+
+
+
+
+
+
+
 
 
 </script>
