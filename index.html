@@ -116,5 +116,11 @@ var duke = baseDuration - 81;
 var B = 360/365 * (duke);
 alert(B);	
 
+// Given B, EoT = 9.87 sin(2B) - 7.53 cos(B) - 1.5 sin(B) where B = 360/365 (d-81)  Solving for a given B = -62.3924 therefore we can check javascript ability to deal with coefficients now.
+
+var EoT = 9.87 * Math.sin((2*B)) - 7.53 * Math.cos((B)) - 1.5 * Math.sin((B));
+alert(EoT);
+
+
 </script>
 </html>
