@@ -1,0 +1,93 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<script language="JavaScript" src="http://www.geoplugin.net/javascript.gp" type="text/javascript"></script>
+<!--<script src="http://api.openweathermap.org/data/2.5/weather?id=4887398,5368361&appid=3c62a93a87db78ba0e866c17154f6fd3"></script>-->
+<!--Hello guys, please attribute me if you decide to reuse my code. Thanks! My name is Michele McMillan. http://coolaidhouse.com, and let me know if you do something super cool or need help, coolaidhouses@gmail.com. You can also find me on github-->
+
+<title>Cool Aid House</title>
+</head>
+
+<body>
+<ul id="demo"></ul>
+</body>
+<script language="Javascript">
+
+// I put everything in the bottom because I wanted to make sure everything in the DOM was loaded first. Created my changing weather variable since I live between cities, and want clients experience to show nearest office. I am using the geoplugin to pull in the lattitude longitude data, and openweather map for the weather information. The numbers in the toggle I found on google instead of downloading the zip on the website, but that was fine.
+
+var weatherToggle = "";
+var longitude = Math.abs(geoplugin_longitude());
+if (longitude <= 98) { var weatherToggle = "4887398"; document.write("Chicago");}
+else {var weatherToggle = "5368361";document.write("Los Angeles"); }
+
+var xhttp = new XMLHttpRequest();
+xhttp.onreadystatechange = function() {
+  
+document.getElementById("demo").innerHTML = xhttp.responseText;  };
+
+//xhttp.open("GET", "http://api.openweathermap.org/data/2.5/weather?id=4887398,5368361&units=metric&appid=3c62a93a87db78ba0e866c17154f6fd3", true);
+ 
+ xhttp.open("GET","http://api.openweathermap.org/data/2.5/weather?id=" + weatherToggle + "&units=metric&appid=3c62a93a87db78ba0e866c17154f6fd3", true);
+ 
+ xhttp.send();
+
+var now     = new Date(); 
+    var year    = now.getFullYear();
+    var month   = now.getMonth()+1; 
+    var day     = now.getDate();
+    var hour    = now.getHours();
+    var minute  = now.getMinutes();
+    var second  = now.getSeconds(); 
+    if(month.toString().length == 1) {
+        var month = '0'+month;
+    }
+    if(day.toString().length == 1) {
+        var day = '0'+day;
+    }   
+    if(hour.toString().length == 1) {
+        var hour = '0'+hour;
+    }
+    if(minute.toString().length == 1) {
+        var minute = '0'+minute;
+    }
+    if(second.toString().length == 1) {
+        var second = '0'+second;
+    }   
+    var dateTime = year+'/'+month+'/'+day+' '+hour+':'+minute+':'+second;   
+    document.write(dateTime);
+	
+//After I was able to successfully determine the user's location, using their IP address approximation data... Combined with date time, I knew I could get sunrise and sunset backgrounds. However, I wanted to be able to animate this. Which is also why I am working with svgs, instead of pngs here. I digress. After not too much searching I found the sunrise equation, and working backwards, begin to calculate variables. Since I want this done I am abbreviating some of the math and explanations, but, you get it.  First I found the sunrise equation, https://en.wikipedia.org/wiki/Sunrise_equation, which ultimately lead me to the fact I need to know what time Local Solar Noon is, which is in Local Solar Time, thus I need to convert the time I already have. http://pveducation.org/pvcdrom/properties-of-sunlight/suns-position Was where I found the information on Local Solar Times. Ok, now for the fun part.
+
+//Step 1: Calculate LSTM = (15 Degrees) x (deltaT GMT, which is +6 for Chicago, and +8 for LA) 
+//Step 2: Calculate EoT (The big guy, lets deal with him first, since I'm not sure if I need degrees or radians yet) EoT = 9.87 sin(2B) - 7.53 cos(B) - 1.5 sin(B) where B = 360/365 (d-81) and d is the number of days since the start of the year, don't forgt leap years. I saw some code samples, but they were too overwhelming so I had to start from scratch to create a days elapsed I could follow and implement.
+		// I need to know if my current year is a leap year, I read UTC years are more accurate, going with that. The ways of testing are as follows, maybe someone can consolidate, but it works, so, mooving on... 
+		
+		var leapCheck = now.getUTCFullYear();
+		if (leapCheck/4 == parseInt(leapCheck/4)) {
+		if (leapCheck / 100 == parseInt(leapCheck/100)) { 
+		if (leapCheck / 400 == parseInt(leapCheck/400))
+			alert("leap year");
+			VerifyLeapDay();
+			}	
+    		else { alert ("leap year");
+			VerifyLeapDay();
+			}
+		} else {
+
+   		alert("not leap year");
+		VerifyLeapDay();
+}
+// We know that if leap year, leap day is always on February 29th, so its pretty simple to add a clause, if today is February 29th, or later, add 1.  
+
+function VerifyLeapDay() {
+	var one_day=1000*60*60*24;
+	var leaped = new Date(year, 0, 1);
+	
+	// alert((now - leaped)/one_day); - days since start of year 
+	document.write((now - leaped)/one_day);
+	}
+	
+
+</script>
+</html>
