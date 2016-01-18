@@ -106,10 +106,15 @@ var now     = new Date();
 		alert(baseDuration);
 		
 }
-// We know that if leap year, leap day is always on February 29th, so its pretty simple to add a clause, if today is February 29th, or later, add 1.  
 
+// Given d = baseDuration, we will call d-81=duke EoT = 9.87 sin(2B) - 7.53 cos(B) - 1.5 sin(B) where B = 360/365 (d-81) 
 
-	
+  
+var duke = baseDuration - 81;
+// alert(duke);
+
+var B = 360/365 * (duke);
+alert(B);	
 
 </script>
 </html>
