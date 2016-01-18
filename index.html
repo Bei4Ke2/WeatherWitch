@@ -63,30 +63,52 @@ var now     = new Date();
 //Step 2: Calculate EoT (The big guy, lets deal with him first, since I'm not sure if I need degrees or radians yet) EoT = 9.87 sin(2B) - 7.53 cos(B) - 1.5 sin(B) where B = 360/365 (d-81) and d is the number of days since the start of the year, don't forgt leap years. I saw some code samples, but they were too overwhelming so I had to start from scratch to create a days elapsed I could follow and implement.
 		// I need to know if my current year is a leap year, I read UTC years are more accurate, going with that. The ways of testing are as follows, maybe someone can consolidate, but it works, so, mooving on... 
 		
+
+	var one_day=1000*60*60*24;
+	var leaped = new Date(year, 0, 1);
+	// alert((now - leaped)/one_day); - days since start of year 
+	//document.write((now - leaped)/one_day);
+	var baseDuration = (now - leaped)/one_day;
+	alert(baseDuration);
+		
 		var leapCheck = now.getUTCFullYear();
+		
 		if (leapCheck/4 == parseInt(leapCheck/4)) {
 		if (leapCheck / 100 == parseInt(leapCheck/100)) { 
 		if (leapCheck / 400 == parseInt(leapCheck/400))
 			alert("leap year");
-			VerifyLeapDay();
+			alert(baseDuration);
+			
+			if (month == 1){
+				
+				baseDuration = baseDuration + 1;
+				
+				alert(baseDuration);
+				
+				}
+					
 			}	
-    		else { alert ("leap year");
-			VerifyLeapDay();
+    		else { 
+			
+			alert ("leap year");
+			alert(baseDuration);
+			if (month == 1){
+				
+				baseDuration = baseDuration + 1;
+				
+				alert(baseDuration);
+				
+				}
 			}
 		} else {
 
    		alert("not leap year");
-		VerifyLeapDay();
+		alert(baseDuration);
+		
 }
 // We know that if leap year, leap day is always on February 29th, so its pretty simple to add a clause, if today is February 29th, or later, add 1.  
 
-function VerifyLeapDay() {
-	var one_day=1000*60*60*24;
-	var leaped = new Date(year, 0, 1);
-	
-	// alert((now - leaped)/one_day); - days since start of year 
-	document.write((now - leaped)/one_day);
-	}
+
 	
 
 </script>
