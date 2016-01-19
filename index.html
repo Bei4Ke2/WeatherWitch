@@ -6,11 +6,91 @@
 <!--<script src="http://api.openweathermap.org/data/2.5/weather?id=4887398,5368361&appid=3c62a93a87db78ba0e866c17154f6fd3"></script>-->
 <!--Hello guys, please attribute me if you decide to reuse my code. Thanks! My name is Michele McMillan. http://coolaidhouse.com, and let me know if you do something super cool or need help, coolaidhouses@gmail.com. You can also find me on github-->
 
+<style type="text/css">
+html {
+width:100%;
+height: 100%;
+}
+
+body {
+width:100%;
+height: 100%;
+margin:0;
+}
+
+.container {
+    
+    min-height: 100%;
+    width: 100%;
+	}
+	
+	.core {
+    border-radius:50%;
+    border:2px solid #000;
+    position:fixed;
+}
+
+.saturn {
+    
+    /* 
+     * Make the initial position to be the center of the circle you want this
+     * object follow.
+     */
+    position: absolute;
+    left: 315px;
+    top: 143px;
+
+    /*
+     * Sets up the animation duration, timing-function (or easing)
+     * and iteration-count. Ensure you use the appropriate vendor-specific 
+     * prefixes as well as the official syntax for now. Remember, tools like 
+     * CSS Please are your friends!
+     */
+    -webkit-animation: myOrbit 4s linear infinite; /* Chrome, Safari 5 */
+       -moz-animation: myOrbit 4s linear infinite; /* Firefox 5-15 */
+         -o-animation: myOrbit 4s linear infinite; /* Opera 12+ */
+            animation: myOrbit 4s linear infinite; /* Chrome, Firefox 16+, 
+                                                      IE 10+, Safari 5 */
+    
+    
+    
+}
+
+/*
+ * Set up the keyframes to actually describe the begining and end states of 
+ * the animation.  The browser will interpolate all the frames between these 
+ * points.  Again, remember your vendor-specific prefixes for now!
+ */
+@-webkit-keyframes myOrbit {
+    from { -webkit-transform: rotate(0deg) translateX(150px) rotate(0deg); }
+    to   { -webkit-transform: rotate(360deg) translateX(150px) rotate(-360deg); }
+}
+
+@-moz-keyframes myOrbit {
+    from { -moz-transform: rotate(0deg) translateX(150px) rotate(0deg); }
+    to   { -moz-transform: rotate(360deg) translateX(150px) rotate(-360deg); }
+}
+
+@-o-keyframes myOrbit {
+    from { -o-transform: rotate(0deg) translateX(150px) rotate(0deg); }
+    to   { -o-transform: rotate(360deg) translateX(150px) rotate(-360deg); }
+}
+
+@keyframes myOrbit {
+    from { transform: rotate(0deg) translateX(150px) rotate(0deg); }
+    to   { transform: rotate(360deg) translateX(150px) rotate(-360deg); }
+}
+</style>
+
 <title>Cool Aid House</title>
 </head>
 
-<body>
+<body class="container">
 <ul id="demo"></ul>
+<div id="center" class="core"></div>
+<div id="sat0" class="core saturn"></div>
+
+
 </body>
 <script language="Javascript">
 
@@ -64,6 +144,8 @@ var now     = new Date();
 
 //Step 2: Calculate EoT (The big guy, lets deal with him first, since I'm not sure if I need degrees or radians yet) EoT = 9.87 sin(2B) - 7.53 cos(B) - 1.5 sin(B) where B = 360/365 (d-81) and d is the number of days since the start of the year, don't forgt leap years. I saw some code samples, but they were too overwhelming so I had to start from scratch to create a days elapsed I could follow and implement.
 		// I need to know if my current year is a leap year, I read UTC years are more accurate, going with that. The ways of testing are as follows, maybe someone can consolidate, but it works, so, mooving on... 
+		
+		//Using this for CSS3 animation of sun due to performance advice http://www.useragentman.com/blog/2013/03/03/animating-circular-paths-using-css3-transitions/#
 		
 
 	var one_day=1000*60*60*24;
@@ -141,15 +223,14 @@ alert("LST: " + LST);
 
 var declinationAngle = 23.45 * Math.sin(B);
 
-alert(delinationAngle);
+alert(declinationAngle);
 
+// Now at this point things become exceedingly more complex. (24 Hours has elapsed, althought I went out and such). How to create the right pallette. I found a few different blogs in 3D animation rooms where people were trying to find the correct color of light. That led me to a few different blogs. Which ultimately led me to the question of how complex do I want to go? What elements do I have control over. http://gamedev.stackexchange.com/questions/46971/what-is-the-color-value-of-daylight Ultimately from http://www.cs.utah.edu/~shirley/papers/sunsky/sunsky.pdf I decided to go radial if possible would be best. We'll see maybe not, but ultimately my favorite, is this latter link which looks very promising http://vterrain.org/Atmosphere/ in particular, precomputed atmospheric scattering. 
 
+//Eric Bruneton and Fabrice Neyret, EGSR 2008
+//Abstract: "Method to render the atmosphere in real time from any viewpoint from ground level to outer space, while taking //Rayleigh and Mie multiple scattering into account [..] reproduces many effects of the scattering of light, such as the //daylight and twilight sky color and aerial perspective for all view and light directions, or the Earth and mountain shadows //(light shafts) inside the atmosphere"
 
-
-
-
-
-
+// Its been a while, lets get some color on this page. Since my image is going to have a city on the bottom, I am going to try to be as accurate as possible by animatting a CSS3 Background with a single radial sphere. So now we are going to add our radial background. Gradient: http://duopixel.com/stackoverflow/gradient/ Well, I ended up using a gradient generator which was great because it gave me some insight into some additional factors I could use for calculation. http://angrytools.com/gradient/
 
 
 
