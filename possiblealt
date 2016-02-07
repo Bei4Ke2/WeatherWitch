@@ -1,0 +1,309 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script language="JavaScript" src="http://www.geoplugin.net/javascript.gp" type="text/javascript"></script>
+<!--<script src="http://api.openweathermap.org/data/2.5/weather?id=4887398,5368361&appid=3c62a93a87db78ba0e866c17154f6fd3"></script>-->
+<!--Hello guys, please attribute me if you decide to reuse my code. Thanks! My name is Michele McMillan. http://coolaidhouse.com, and let me know if you do something super cool or need help, coolaidhouses@gmail.com. You can also find me on github-->
+
+<style type="text/css">
+html {
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#dcdfe2+4,dcdfe2+48,94bee5+78,94bee5+78,2f69b3+100 */
+background: rgb(220,223,226); /* Old browsers */
+/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPHJhZGlhbEdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgY3g9IjUwJSIgY3k9IjUwJSIgcj0iNzUlIj4KICAgIDxzdG9wIG9mZnNldD0iNCUiIHN0b3AtY29sb3I9IiNkY2RmZTIiIHN0b3Atb3BhY2l0eT0iMSIvPgogICAgPHN0b3Agb2Zmc2V0PSI0OCUiIHN0b3AtY29sb3I9IiNkY2RmZTIiIHN0b3Atb3BhY2l0eT0iMSIvPgogICAgPHN0b3Agb2Zmc2V0PSI3OCUiIHN0b3AtY29sb3I9IiM5NGJlZTUiIHN0b3Atb3BhY2l0eT0iMSIvPgogICAgPHN0b3Agb2Zmc2V0PSI3OCUiIHN0b3AtY29sb3I9IiM5NGJlZTUiIHN0b3Atb3BhY2l0eT0iMSIvPgogICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjMmY2OWIzIiBzdG9wLW9wYWNpdHk9IjEiLz4KICA8L3JhZGlhbEdyYWRpZW50PgogIDxyZWN0IHg9Ii01MCIgeT0iLTUwIiB3aWR0aD0iMTAxIiBoZWlnaHQ9IjEwMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+background: -moz-radial-gradient(center, ellipse cover,  rgba(220,223,226,1) 4%, rgba(220,223,226,1) 48%, rgba(148,190,229,1) 78%, rgba(148,190,229,1) 78%, rgba(47,105,179,1) 100%); /* FF3.6-15 */
+background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(4%,rgba(220,223,226,1)), color-stop(48%,rgba(220,223,226,1)), color-stop(78%,rgba(148,190,229,1)), color-stop(78%,rgba(148,190,229,1)), color-stop(100%,rgba(47,105,179,1))); /* Chrome4-9,Safari4-5 */
+background: -webkit-radial-gradient(center, ellipse cover,  rgba(220,223,226,1) 4%,rgba(220,223,226,1) 48%,rgba(148,190,229,1) 78%,rgba(148,190,229,1) 78%,rgba(47,105,179,1) 100%); /* Chrome10-25,Safari5.1-6 */
+background: -o-radial-gradient(center, ellipse cover,  rgba(220,223,226,1) 4%,rgba(220,223,226,1) 48%,rgba(148,190,229,1) 78%,rgba(148,190,229,1) 78%,rgba(47,105,179,1) 100%); /* Opera 12+ */
+background: -ms-radial-gradient(center, ellipse cover,  rgba(220,223,226,1) 4%,rgba(220,223,226,1) 48%,rgba(148,190,229,1) 78%,rgba(148,190,229,1) 78%,rgba(47,105,179,1) 100%); /* IE10 preview */
+background: radial-gradient(ellipse at center,  rgba(220,223,226,1) 4%,rgba(220,223,226,1) 48%,rgba(148,190,229,1) 78%,rgba(148,190,229,1) 78%,rgba(47,105,179,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#dcdfe2', endColorstr='#2f69b3',GradientType=1 ); /* IE6-8 fallback on horizontal gradient */
+height:200%;
+	overflow:hidden;
+}
+
+body {
+width:100%;
+height: 100%;
+
+
+}
+	#footercolor{width: 100%;
+    height: 10%;
+    background: aqua;
+    position: relative;
+    bottom: 0;
+	}
+	
+	
+
+.container {
+    
+    min-height: 100%;
+    width: 100%;
+	margin:0;
+	}
+	
+
+#cityofla{bottom:0; position:fixed; right:0;}
+#navigate { text-align: center; }
+#navigate1 { float: left; }
+#navigate2 { display: inline; }
+#navigate3 { float: right; }
+
+
+
+</style>
+
+<title>Cool Aid House</title>
+</head>
+
+<body class="container">
+
+
+
+<div id="info">
+
+</div>
+	
+	<canvas id="canvas" width="400" height="400"
+style="background-color:none">
+</canvas>
+
+
+
+<script>
+var canvas = document.getElementById("canvas");
+var ctx = canvas.getContext("2d");
+var radius = canvas.height / 2;
+ctx.translate(radius, radius);
+radius = radius * 0.90
+setInterval(drawClock, 1000);
+
+function drawClock() {
+  drawFace(ctx, radius);
+  drawNumbers(ctx, radius);
+  drawTime(ctx, radius);
+}
+
+function drawFace(ctx, radius) {
+  var grad;
+  ctx.beginPath();
+  ctx.arc(0, 0, radius, 0, 2*Math.PI);
+  ctx.fillStyle = 'white';
+  ctx.fill();
+ 
+ 
+  ctx.lineWidth = radius*0.1;
+
+  ctx.beginPath();
+  ctx.arc(0, 0, radius*0.1, 0, 2*Math.PI);
+  ctx.fillStyle = '#333';
+  ctx.fill();
+}
+
+function drawNumbers(ctx, radius) {
+  var ang;
+  var num;
+  ctx.font = radius*0.15 + "px arial";
+  ctx.textBaseline="middle";
+  ctx.textAlign="center";
+  for(num = 1; num < 13; num++){
+    ang = num * Math.PI / 6;
+    ctx.rotate(ang);
+    ctx.translate(0, -radius*0.85);
+    ctx.rotate(-ang);
+    ctx.fillText(num.toString(), 0, 0);
+    ctx.rotate(ang);
+    ctx.translate(0, radius*0.85);
+    ctx.rotate(-ang);
+  }
+}
+
+function drawTime(ctx, radius){
+    var now = new Date();
+    var hour = now.getHours();
+    var minute = now.getMinutes();
+    var second = now.getSeconds();
+    //hour
+    hour=hour%12;
+    hour=(hour*Math.PI/6)+
+    (minute*Math.PI/(6*60))+
+    (second*Math.PI/(360*60));
+    drawHand(ctx, hour, radius*0.5, radius*0.07);
+    //minute
+    minute=(minute*Math.PI/30)+(second*Math.PI/(30*60));
+    drawHand(ctx, minute, radius*0.8, radius*0.07);
+    // second
+    second=(second*Math.PI/30);
+    drawHand(ctx, second, radius*0.9, radius*0.02);
+}
+
+function drawHand(ctx, pos, length, width) {
+    ctx.beginPath();
+    ctx.lineWidth = width;
+    ctx.lineCap = "round";
+    ctx.moveTo(0,0);
+    ctx.rotate(pos);
+    ctx.lineTo(0, -length);
+    ctx.stroke();
+    ctx.rotate(-pos);
+}
+</script>
+<div id="navigate">
+<div id="navigate1">test</div><div id="navigate2">test</div><div id="navigate3">test</div>
+</div>
+	<div id="footercolor">
+	<img src="imges/la.svg" id="cityofla">
+	
+	</div>
+</body>
+<script language="Javascript">
+
+// I put everything in the bottom because I wanted to make sure everything in the DOM was loaded first. Created my changing weather variable since I live between cities, and want clients experience to show nearest office. I am using the geoplugin to pull in the lattitude longitude data, and openweather map for the weather information. The numbers in the toggle I found on google instead of downloading the zip on the website, but that was fine.
+
+var weatherToggle = "";
+var longitude = Math.abs(geoplugin_longitude());
+if (longitude <= 98) { var weatherToggle = "4887398"; var LSTM = 90;  document.getElementById("info").innerHTML + "Chicago";}
+else {var weatherToggle = "5368361"; var LSTM = 120;  document.getElementById("info").innerHTML + "Los Angeles"; }
+
+var xhttp = new XMLHttpRequest();
+xhttp.onreadystatechange = function() {
+  
+document.getElementById("info").innerHTML = document.getElementById("info").innerHTML + xhttp.responseText;  };
+
+//xhttp.open("GET", "http://api.openweathermap.org/data/2.5/weather?id=4887398,5368361&units=metric&appid=3c62a93a87db78ba0e866c17154f6fd3", true);
+ 
+ xhttp.open("GET","http://api.openweathermap.org/data/2.5/weather?id=" + weatherToggle + "&units=metric&appid=3c62a93a87db78ba0e866c17154f6fd3", true);
+ 
+ xhttp.send();
+
+var now     = new Date(); 
+    var year    = now.getFullYear();
+    var month   = now.getMonth()+1; 
+    var day     = now.getDate();
+    var hour    = now.getHours();
+    var minute  = now.getMinutes();
+    var second  = now.getSeconds(); 
+    if(month.toString().length == 1) {
+        var month = '0'+month;
+    }
+    if(day.toString().length == 1) {
+        var day = '0'+day;
+    }   
+    if(hour.toString().length == 1) {
+        var hour = '0'+hour;
+    }
+    if(minute.toString().length == 1) {
+        var minute = '0'+minute;
+    }
+    if(second.toString().length == 1) {
+        var second = '0'+second;
+    }   
+    var dateTime = year+'/'+month+'/'+day+' '+hour+':'+minute+':'+second;  
+	
+	document.getElementById("info").innerHTML= document.getElementById("info").innerHTML + dateTime; 
+   
+	
+//After I was able to successfully determine the user's location, using their IP address approximation data... Combined with date time, I knew I could get sunrise and sunset backgrounds. However, I wanted to be able to animate this. Which is also why I am working with svgs, instead of pngs here. I digress. After not too much searching I found the sunrise equation, and working backwards, begin to calculate variables. Since I want this done I am abbreviating some of the math and explanations, but, you get it.  First I found the sunrise equation, https://en.wikipedia.org/wiki/Sunrise_equation, which ultimately lead me to the fact I need to know what time Local Solar Noon is, which is in Local Solar Time, thus I need to convert the time I already have. http://pveducation.org/pvcdrom/properties-of-sunlight/suns-position Was where I found the information on Local Solar Times. Ok, now for the fun part.
+
+//Step 1: Calculate LSTM = (15 Degrees) x (deltaT GMT, which is +6 for Chicago, and +8 for LA) , makes more since later when other variables are assigned anyway. Moved below.
+
+
+//Step 2: Calculate EoT (The big guy, lets deal with him first, since I'm not sure if I need degrees or radians yet) EoT = 9.87 sin(2B) - 7.53 cos(B) - 1.5 sin(B) where B = 360/365 (d-81) and d is the number of days since the start of the year, don't forgt leap years. I saw some code samples, but they were too overwhelming so I had to start from scratch to create a days elapsed I could follow and implement.
+		// I need to know if my current year is a leap year, I read UTC years are more accurate, going with that. The ways of testing are as follows, maybe someone can consolidate, but it works, so, mooving on... 
+		
+
+	var one_day=1000*60*60*24;
+	var leaped = new Date(year, 0, 1);
+	// document.write((now - leaped)/one_day); - days since start of year 
+	//document.write((now - leaped)/one_day);
+	var baseDuration = (now - leaped)/one_day;
+	document.getElementById("info").innerHTML= document.getElementById("info").innerHTML + baseDuration; 
+	
+		
+		var leapCheck = now.getUTCFullYear();
+		
+		if (leapCheck/4 == parseInt(leapCheck/4)) {
+		if (leapCheck / 100 == parseInt(leapCheck/100)) { 
+		if (leapCheck / 400 == parseInt(leapCheck/400))
+			document.getElementById("info").innerHTML + "Leap Year";
+				document.getElementById("info").innerHTML= document.getElementById("info").innerHTML + baseDuration; 
+			
+			if (month >= 3){
+				
+				baseDuration = baseDuration + 1;
+				
+					document.getElementById("info").innerHTML= document.getElementById("info").innerHTML + baseDuration; 
+				
+				}
+					
+			}	
+    		else { 
+			
+			document.getElementById("info").innerHTML + "Leap Year";
+				document.getElementById("info").innerHTML= document.getElementById("info").innerHTML + baseDuration; 
+			if (month >= 3){
+				
+				baseDuration = baseDuration + 1;
+				
+					document.getElementById("info").innerHTML= document.getElementById("info").innerHTML + baseDuration; 
+				
+				}
+			}
+		} else {
+
+   		document.getElementById("info").innerHTML + xhttp.responseText;
+			document.getElementById("info").innerHTML= document.getElementById("info").innerHTML + baseDuration; 
+		
+}
+
+// Given d = baseDuration, we will call d-81=duke EoT = 9.87 sin(2B) - 7.53 cos(B) - 1.5 sin(B) where B = 360/365 (d-81) 
+
+  
+var duke = baseDuration - 81;
+// document.write(duke);
+
+var B = 360/365 * (duke);
+document.getElementById("info").innerHTML= document.getElementById("info").innerHTML + B; 
+
+// Given B, EoT = 9.87 sin(2B) - 7.53 cos(B) - 1.5 sin(B) where B = 360/365 (d-81)  Solving for a given B = -62.3924 therefore we can check javascript handling of coefficients now.
+
+var EoT = 9.87 * Math.sin((2*B)) - 7.53 * Math.cos((B)) - 1.5 * Math.sin((B));
+document.getElementById("info").innerHTML= document.getElementById("info").innerHTML + EoT; 
+
+
+ 
+<!--Time Correction Factor (TC) The net Time Correction Factor (in minutes) accounts for the variation of the Local Solar Time (LST) within a given time zone due to the longitude variations within the time zone and also incorporates the EoT above. TC = 4 (Longitude - LSTM) + EoT, since longitude is also in degrees, I will leave LSTM in degrees (was a question before, not now)-->
+
+
+var TC = 4 * ( geoplugin_longitude() - LSTM ) + EoT;
+
+document.getElementById("info").innerHTML= document.getElementById("info").innerHTML + TC + "pass";
+
+//Finally Local Solar Time (LST) can be found by using the previous two corrections to adjust the local time (LT). LST = LT + TC/60
+
+var LST = new Date(now.getTime() + (TC/60)*60000);
+
+document.getElementById("info").innerHTML= document.getElementById("info").innerHTML + LST;
+
+//Although I don't need declination angle (I don't think, for my original idea, I am going to do it anyway and maybe print it on the screen Declination Angle = 23.45 degrees sin [ 360/365 (d-81) ] which is basically 23.45 degrees sin (B).
+
+var declinationAngle = 23.45 * Math.sin(B);
+
+document.getElementById("info").innerHTML= document.getElementById("info").innerHTML + declinationAngle;
+
+// Now at this point things become exceedingly more complex. (24 Hours has elapsed, althought I went out and such). How to create the right pallette. I found a few different blogs in 3D animation rooms where people were trying to find the correct color of light. That led me to a few different blogs. Which ultimately led me to the question of how complex do I want to go? What elements do I have control over. http://gamedev.stackexchange.com/questions/46971/what-is-the-color-value-of-daylight Ultimately from http://www.cs.utah.edu/~shirley/papers/sunsky/sunsky.pdf I decided to go radial if possible would be best. We'll see maybe not, but ultimately my favorite, is this latter link which looks very promising http://vterrain.org/Atmosphere/ in particular, precomputed atmospheric scattering. 
+
+//Eric Bruneton and Fabrice Neyret, EGSR 2008
+//Abstract: "Method to render the atmosphere in real time from any viewpoint from ground level to outer space, while taking //Rayleigh and Mie multiple scattering into account [..] reproduces many effects of the scattering of light, such as the //daylight and twilight sky color and aerial perspective for all view and light directions, or the Earth and mountain shadows //(light shafts) inside the atmosphere"
+
+// Its been a while, lets get some color on this page. Since my image is going to have a city on the bottom, I am going to try to be as accurate as possible by animatting a CSS3 Background with a single radial sphere. So now we are going to add our radial background. Gradient: http://duopixel.com/stackoverflow/gradient/ Well, I ended up using a gradient generator which was great because it gave me some insight into some additional factors I could use for calculation. http://angrytools.com/gradient/
+
+
+
+
+</script>
+</html>
