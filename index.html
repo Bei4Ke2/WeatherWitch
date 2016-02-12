@@ -6,23 +6,22 @@
 <script language="JavaScript" src="http://www.geoplugin.net/javascript.gp" type="text/javascript"></script>
 <!--<script src="http://api.openweathermap.org/data/2.5/weather?id=4887398,5368361&appid=3c62a93a87db78ba0e866c17154f6fd3"></script>-->
 <!--Hello guys, please attribute me if you decide to reuse my code. Thanks! My name is Michele McMillan. http://coolaidhouse.com, and let me know if you do something super cool or need help, coolaidhouses@gmail.com. You can also find me on github-->
-
+<link href='https://fonts.googleapis.com/css?family=Oswald:700' rel='stylesheet' type='text/css'>
 <style type="text/css">
 html {
 height:200%;
 	overflow:hidden;
-
-/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f2f6f8+0,f7f7f7+9,d8e1e7+29,fcfeff+62,fcfeff+82,dcdddf+94 */
-background: rgb(242,246,248); /* Old browsers */
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000108+0,001626+17,013a5f+100 */
+background: rgb(0,1,8); /* Old browsers */
 /* IE9 SVG, needs conditional override of 'filter' to 'none' */
-background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2YyZjZmOCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjklIiBzdG9wLWNvbG9yPSIjZjdmN2Y3IiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iMjklIiBzdG9wLWNvbG9yPSIjZDhlMWU3IiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iNjIlIiBzdG9wLWNvbG9yPSIjZmNmZWZmIiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iODIlIiBzdG9wLWNvbG9yPSIjZmNmZWZmIiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iOTQlIiBzdG9wLWNvbG9yPSIjZGNkZGRmIiBzdG9wLW9wYWNpdHk9IjEiLz4KICA8L2xpbmVhckdyYWRpZW50PgogIDxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9InVybCgjZ3JhZC11Y2dnLWdlbmVyYXRlZCkiIC8+Cjwvc3ZnPg==);
-background: -moz-linear-gradient(top,  rgba(242,246,248,1) 0%, rgba(247,247,247,1) 9%, rgba(216,225,231,1) 29%, rgba(252,254,255,1) 62%, rgba(252,254,255,1) 82%, rgba(220,221,223,1) 94%); /* FF3.6-15 */
-background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(242,246,248,1)), color-stop(9%,rgba(247,247,247,1)), color-stop(29%,rgba(216,225,231,1)), color-stop(62%,rgba(252,254,255,1)), color-stop(82%,rgba(252,254,255,1)), color-stop(94%,rgba(220,221,223,1))); /* Chrome4-9,Safari4-5 */
-background: -webkit-linear-gradient(top,  rgba(242,246,248,1) 0%,rgba(247,247,247,1) 9%,rgba(216,225,231,1) 29%,rgba(252,254,255,1) 62%,rgba(252,254,255,1) 82%,rgba(220,221,223,1) 94%); /* Chrome10-25,Safari5.1-6 */
-background: -o-linear-gradient(top,  rgba(242,246,248,1) 0%,rgba(247,247,247,1) 9%,rgba(216,225,231,1) 29%,rgba(252,254,255,1) 62%,rgba(252,254,255,1) 82%,rgba(220,221,223,1) 94%); /* Opera 11.10-11.50 */
-background: -ms-linear-gradient(top,  rgba(242,246,248,1) 0%,rgba(247,247,247,1) 9%,rgba(216,225,231,1) 29%,rgba(252,254,255,1) 62%,rgba(252,254,255,1) 82%,rgba(220,221,223,1) 94%); /* IE10 preview */
-background: linear-gradient(to bottom,  rgba(242,246,248,1) 0%,rgba(247,247,247,1) 9%,rgba(216,225,231,1) 29%,rgba(252,254,255,1) 62%,rgba(252,254,255,1) 82%,rgba(220,221,223,1) 94%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2f6f8', endColorstr='#dcdddf',GradientType=0 ); /* IE6-8 */
+background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzAwMDEwOCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjE3JSIgc3RvcC1jb2xvcj0iIzAwMTYyNiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwMTNhNWYiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+background: -moz-linear-gradient(top,  rgba(0,1,8,1) 0%, rgba(0,22,38,1) 17%, rgba(1,58,95,1) 100%); /* FF3.6-15 */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,1,8,1)), color-stop(17%,rgba(0,22,38,1)), color-stop(100%,rgba(1,58,95,1))); /* Chrome4-9,Safari4-5 */
+background: -webkit-linear-gradient(top,  rgba(0,1,8,1) 0%,rgba(0,22,38,1) 17%,rgba(1,58,95,1) 100%); /* Chrome10-25,Safari5.1-6 */
+background: -o-linear-gradient(top,  rgba(0,1,8,1) 0%,rgba(0,22,38,1) 17%,rgba(1,58,95,1) 100%); /* Opera 11.10-11.50 */
+background: -ms-linear-gradient(top,  rgba(0,1,8,1) 0%,rgba(0,22,38,1) 17%,rgba(1,58,95,1) 100%); /* IE10 preview */
+background: linear-gradient(to bottom,  rgba(0,1,8,1) 0%,rgba(0,22,38,1) 17%,rgba(1,58,95,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000108', endColorstr='#013a5f',GradientType=0 ); /* IE6-8 */
 
 }
 
@@ -36,6 +35,7 @@ height: 100%;
     height: 10%;
     position: fixed;
     bottom: 0;
+		z-index:-1;
 /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,a8a8aa+100&0+0,0+86,0.8+100 */
 /* IE9 SVG, needs conditional override of 'filter' to 'none' */
 background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIwIi8+CiAgICA8c3RvcCBvZmZzZXQ9Ijg2JSIgc3RvcC1jb2xvcj0iI2I0YjRiNiIgc3RvcC1vcGFjaXR5PSIwIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNhOGE4YWEiIHN0b3Atb3BhY2l0eT0iMC44Ii8+CiAgPC9saW5lYXJHcmFkaWVudD4KICA8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2dyYWQtdWNnZy1nZW5lcmF0ZWQpIiAvPgo8L3N2Zz4=);
@@ -58,18 +58,313 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', e
 	margin:0;
 	}
 	
+	div#logotext {
+    
+    font-size: 6em;
+    z-index: 1;
+    top: 35%;
+		left:25%;
+		font-family: 'Oswald', sans-serif;
+    position: fixed;
+		color: #5CA4A9;}
 
 #cityofla{bottom:0; position:fixed; right:0;}
-#navigate { text-align: center; }
-#navigate1 { float: left; }
+	svg#thehouse{    bottom: 0;
+    position: fixed;
+    left: 250px;
+    width: 350px;
+    /* z-index: 10; */
+    height: 197px;}
+	
+	img#thetyper {
+    bottom: 8px;
+    position: fixed;
+    left: 368px;
+    width: 20px;
+      opacity: .1;
+}
+	
+		img#thecamera {
+    bottom: 52px;
+    position: fixed;
+    left: 368px;
+    width: 40px;
+       opacity: .1;
+}
+	
+			img#writer {
+    bottom: 8px;
+    position: fixed;
+    left: 416px;
+    width: 23px;
+     opacity: .1;
+}
+	
+			img#dance3 {
+    bottom: 52px;
+    position: fixed;
+    left: 420px;
+    width: 40px;
+        opacity: .1;
+}
+				img#dance4 {
+    bottom: 52px;
+    position: fixed;
+    left: 454px;
+    width: 40px;
+       opacity: .1;
+}
+	
+	
+			img#violin {
+    bottom: 52px;
+    position: fixed;
+    left: 440px;
+    width: 40px;
+      opacity: .1;
+}
+	
+#navigate { text-align: center; font-size:2em; position: fixed; bottom: 0; margin-top:10px; width:175px;}
+ #navigate1 { float: left; }
 #navigate2 { display: inline; }
 #navigate3 { float: right; }
-
+	.navigation{ background-color:#ff0; padding:10px; z-index:10;}
 img.clouds {
       margin-left: -25px;
     margin-bottom: -85px;
   
     float: right;
+}
+
+	
+.sky {
+  height: 100%;
+  /*background: #007fd5; */
+  position: relative;
+  overflow: hidden;
+  -webkit-animation: sky_background 90s ease-out infinite;
+  -moz-animation: sky_background 90s ease-out infinite;
+  -o-animation: sky_background 90s ease-out infinite;
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0)
+}
+
+/* .moon {
+  background: url("http://montanaflynn.me/lab/css-clouds/images/moon.png");
+  position: absolute;
+  left: 0;
+  height: 100%;
+  width: 300%;
+  -webkit-animation: moon 50s linear infinite;
+  -moz-animation: moon 50s linear infinite;
+  -o-animation: moon 50s linear infinite;
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0)
+} */
+
+.clouds_one {
+  background: url("images/cloud-9.png");
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 300%;
+  -webkit-animation: cloud_one 75s linear infinite;
+  -moz-animation: cloud_one 75s linear infinite;
+  -o-animation: cloud_one 75s linear infinite;
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0)
+}
+
+.clouds_two {
+  background: url("images/cloud-26.png");
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 300%;
+  -webkit-animation: cloud_two 90s linear infinite;
+  -moz-animation: cloud_two 90s linear infinite;
+  -o-animation: cloud_two 90s linear infinite;
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0)
+}
+
+.clouds_three {
+  background: url("images/cloud-30.png");
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 300%;
+  -webkit-animation: cloud_three 100s linear infinite;
+  -moz-animation: cloud_three 100s linear infinite;
+  -o-animation: cloud_three 100s linear infinite;
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0)
+}
+
+/* @-webkit-keyframes sky_background {
+  0% {
+    background: #007fd5;
+    color: #007fd5
+  }
+  50% {
+    background: #000;
+    color: #a3d9ff
+  }
+  100% {
+    background: #007fd5;
+    color: #007fd5
+  }
+} */
+
+/* @-webkit-keyframes moon {
+  0% {
+    opacity: 0;
+    left: -200% -moz-transform: scale(0.5);
+    -webkit-transform: scale(0.5);
+  }
+  50% {
+    opacity: 1;
+    -moz-transform: scale(1);
+    left: 0% bottom: 250px;
+    -webkit-transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    bottom: 500px;
+    -moz-transform: scale(0.5);
+    -webkit-transform: scale(0.5);
+  }
+} */
+
+@-webkit-keyframes cloud_one {
+  0% {
+    left: 0
+  }
+  100% {
+    left: -200%
+  }
+}
+
+@-webkit-keyframes cloud_two {
+  0% {
+    left: 0
+  }
+  100% {
+    left: -200%
+  }
+}
+
+@-webkit-keyframes cloud_three {
+  0% {
+    left: 0
+  }
+  100% {
+    left: -200%
+  }
+}
+
+/* @-moz-keyframes sky_background {
+  0% {
+    background: #007fd5;
+    color: #007fd5
+  }
+  50% {
+    background: #000;
+    color: #a3d9ff
+  }
+  100% {
+    background: #007fd5;
+    color: #007fd5
+  }
+} */
+
+@-moz-keyframes moon {
+  0% {
+    opacity: 0;
+    left: -200% -moz-transform: scale(0.5);
+    -webkit-transform: scale(0.5);
+  }
+  50% {
+    opacity: 1;
+    -moz-transform: scale(1);
+    left: 0% bottom: 250px;
+    -webkit-transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    bottom: 500px;
+    -moz-transform: scale(0.5);
+    -webkit-transform: scale(0.5);
+  }
+}
+
+@-moz-keyframes cloud_one {
+  0% {
+    left: 0
+  }
+  100% {
+    left: -200%
+  }
+}
+
+@-moz-keyframes cloud_two {
+  0% {
+    left: 0
+  }
+  100% {
+    left: -200%
+  }
+}
+
+@-moz-keyframes cloud_three {
+  0% {
+    left: 0
+  }
+  100% {
+    left: -200%
+  }
+}
+	
+	canvas#canvas {
+    position: fixed;
+    top: 50px;
+		right:50px;
+    z-index: 0;
+}
+	
+	img#themoon {
+    position: fixed;
+    top: 41px;
+    right: 39px;
+    width: 220px;
+    z-index: 3;
+    opacity: .8;
+}
+	
+		img#lefthouse {
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+   height: 120px;
+    z-index: 3;
+    
+}
+	
+		img#righthouse {
+    position: fixed;
+    bottom: 0px;
+    right: 39px;
+    height: 120px;
+    z-index: 3;
+    
 }
 
 </style>
@@ -78,30 +373,29 @@ img.clouds {
 </head>
 
 <body class="container">
-	
+	<div class="coole">coolaidhouse</div>
 	<div id="cloudsGroup">
 		
 	</div>
-
-<img src="images/Cloud-3.png" class="clouds" width="400px">
-<img src="images/Cloud-9.png" class="clouds" width="400px">
-<img src="images/Cloud-16.png" class="clouds" width="400px">
-<img src="images/Cloud-20.png" class="clouds" width="400px">
-<img src="images/Cloud-26.png" class="clouds" width="400px">
-<img src="images/Cloud-27.png" class="clouds" width="400px">
-<img src="images/Cloud-30.png" class="clouds" width="400px">
-
-	
+<img src="imges/moon.png" id="themoon">
+  <div class="sky">
+    <div class="moon"></div>
+    <div class="clouds_one"></div>
+    <div class="clouds_two"></div>
+    <div class="clouds_three"></div>
+  </div>
 
 <div id="info" style="display:none;">
 
 </div>
 	
-	<canvas id="canvas" width="400" height="400"
+	<canvas id="canvas" width="200" height="200"
 style="background-color:none">
 </canvas>
 
-
+<div id="logotext">
+	coolaidhouse
+	</div>
 
 <script>
 var canvas = document.getElementById("canvas");
@@ -182,9 +476,256 @@ function drawHand(ctx, pos, length, width) {
 }
 </script>
 <div id="navigate">
-<div id="navigate1">test</div><div id="navigate2">test</div><div id="navigate3">test</div>
+<div id="navigate1" class="navigation" >Web</div><div id="navigate2" class="navigation" >Video</div><div id="navigate3" class="navigation" >Still</div>
+<div id="navigate4" class="navigation" >Contact</div>
 </div>
+	<img src="imges/lefthouses.png" id="lefthouse">
+		<!--the new house-->
+		<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="265.1268mm"
+   height="149.29492mm"
+   viewBox="0 0 939.42567 528.99775"
+   id="thehouse"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="housecool.svg">
+  <defs
+     id="defs4" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.35"
+     inkscape:cx="-147"
+     inkscape:cy="445.71427"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1366"
+     inkscape:window-height="705"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-59.142857,-449.07871)">
+    <rect
+       y="528.88055"
+       x="299.94693"
+       height="40.106144"
+       width="442.96329"
+       id="rect4333"
+       style="fill:#6c5353;stroke:none;stroke-width:1.29385519;stroke-miterlimit:4;stroke-dasharray:none" />
+    <rect
+       style="fill:#483737;stroke:none;stroke-width:1.39999998;stroke-miterlimit:4;stroke-dasharray:none"
+       id="rect4136"
+       width="285.71429"
+       height="528.57141"
+       x="59.999996"
+       y="449.50507" />
+    <rect
+       y="449.50507"
+       x="711.42859"
+       height="528.57141"
+       width="285.71429"
+       id="rect4138"
+       style="fill:#483737;stroke:none;stroke-width:1.39999998;stroke-miterlimit:4;stroke-dasharray:none" />
+    <path
+       style="fill:#241c1c;stroke:none;stroke-width:1.39999998;stroke-miterlimit:4;stroke-dasharray:none"
+       d="M 266.85547 151.85352 L 266.85547 528.99805 L 540 528.99805 L 540 408.99805 L 614.28516 408.99805 L 614.28516 528.99805 L 672.57031 528.99805 L 672.57031 151.85352 L 266.85547 151.85352 z "
+       transform="translate(59.142857,449.07871)"
+       id="rect4140" />
+    <rect
+       style="fill:#483737;stroke:none;stroke-width:1.29385519;stroke-miterlimit:4;stroke-dasharray:none"
+       id="rect4142"
+       width="442.96329"
+       height="22.963287"
+       x="299.94693"
+       y="548.88055" />
+    <rect
+       style="opacity:0.456;fill:#6c5353;stroke:none;stroke-width:1.39999998;stroke-miterlimit:4;stroke-dasharray:none"
+       id="rect4144"
+       width="320"
+       height="157.14285"
+       x="372.85715"
+       y="672.93365" />
+    <circle onclick='pauseTrack(evt)'
+       style="fill:#ac9393;stroke:none;stroke-width:2.50453639;stroke-miterlimit:4;stroke-dasharray:none"
+       id="Pause"
+       cx="202.85715"
+       cy="605.2193"
+       r="89.447731" />
+    <circle
+       style="fill:#ac9393;stroke:none;stroke-width:2.50453639;stroke-miterlimit:4;stroke-dasharray:none"
+       id="path4146-0"
+       cx="854.28577"
+       cy="583.79077"
+       r="89.447731" />
+    <circle
+       style="fill:#ac9393;stroke:none;stroke-width:2.50453639;stroke-miterlimit:4;stroke-dasharray:none"
+       id="path4146-4"
+       cx="202.85715"
+       cy="852.36218"
+       r="89.447731" />
+    <circle
+       style="fill:#ac9393;stroke:none;stroke-width:2.50453639;stroke-miterlimit:4;stroke-dasharray:none"
+       id="path4146-6"
+       cx="854.28577"
+       cy="846.64789"
+       r="89.447731" />
+    <path
+       style="fill:#6c5353;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 62,450.36221 17.142857,31.09062 0,477.66513 -20,16.95853 z"
+       id="path4224"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:#6c5353;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 995.71135,449.07871 -17.14286,31.09062 0,477.6651 20,16.95857 z"
+       id="path4224-1"
+       inkscape:connector-curvature="0" />
+    <circle onclick='pauseTrack(evt)'
+       style="fill:#e3dbdb;stroke:#c8b7b7;stroke-width:1.59723854;stroke-miterlimit:4;stroke-dasharray:none"
+       id="path4146-1"
+       cx="202.85715"
+       cy="605.2193"
+       r="57.044235" />
+    <circle
+       style="fill:#e3dbdb;stroke:#c8b7b7;stroke-width:1.59723854;stroke-miterlimit:4;stroke-dasharray:none"
+       id="path4146-1-8"
+       cx="202.85715"
+       cy="852.36218"
+       r="57.044235" />
+    <circle
+       style="fill:#e3dbdb;stroke:#c8b7b7;stroke-width:1.59723854;stroke-miterlimit:4;stroke-dasharray:none"
+       id="path4146-1-4"
+       cx="854.28577"
+       cy="583.79077"
+       r="57.044235" />
+    <circle
+       style="fill:#e3dbdb;stroke:#c8b7b7;stroke-width:1.59723854;stroke-miterlimit:4;stroke-dasharray:none"
+       id="path4146-1-0"
+       cx="854.28577"
+       cy="846.64789"
+       r="57.044235" />
+    <circle onclick='pauseTrack(evt)'
+       style="opacity:1;fill:#483737;stroke:#c8b7b7;stroke-width:1.39999998;stroke-miterlimit:4;stroke-dasharray:none"
+       id="path4289"
+       cx="202.85715"
+       cy="605.2193"
+       r="37.142857" />
+    <circle
+       style="opacity:1;fill:#483737;stroke:#c8b7b7;stroke-width:1.39999998;stroke-miterlimit:4;stroke-dasharray:none"
+       id="path4289-9"
+       cx="202.85715"
+       cy="852.36218"
+       r="37.142857" />
+    <circle
+       style="opacity:1;fill:#483737;stroke:#c8b7b7;stroke-width:1.39999998;stroke-miterlimit:4;stroke-dasharray:none"
+       id="path4289-98"
+       cx="854.28577"
+       cy="583.79077"
+       r="37.142857" />
+    <circle
+       style="opacity:1;fill:#483737;stroke:#c8b7b7;stroke-width:1.39999998;stroke-miterlimit:4;stroke-dasharray:none"
+       id="path4289-7"
+       cx="854.28577"
+       cy="846.64789"
+       r="37.142857" />
+    <path
+       style="fill:#6c5353;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 327.14286,600.36221 17.14285,22.13517 0,340.07683 -20,12.07372 z"
+       id="path4224-9"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:#6c5353;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 730.28571,599.79078 -17.14285,22.13517 0,340.07685 20,12.0737 z"
+       id="path4224-9-5"
+       inkscape:connector-curvature="0" />
+    <rect
+       style="opacity:0.5;fill:#6c5353;stroke:none;stroke-width:1.39999998;stroke-miterlimit:4;stroke-dasharray:none"
+       id="rect4365"
+       width="94.285713"
+       height="97.14286"
+       x="377.14285"
+       y="858.07648" />
+    <rect
+       style="opacity:0.5;fill:#6c5353;stroke:none;stroke-width:1.39999998;stroke-miterlimit:4;stroke-dasharray:none"
+       id="rect4365-9"
+       width="94.285713"
+       height="97.14286"
+       x="490"
+       y="858.07648" />
+  </g>
+</svg>
+
+		
+		<!--the end-->
+	
+	<img src="imges/righthouses.png" id="righthouse">
+	
+				<img src="imges/typer.gif" id="thetyper">
+		<img src="imges/cameraman.gif" id="thecamera">
+		<img src="imges/3dance.gif" id="dance3">
+		<img src="imges/violin.gif" id="violin">
+	<img src="imges/3dance.gif" id="dance4">
+		<img src="imges/writer.gif" id="writer">
+	<img src="imges/la.svg" id="cityofla">
+		
+<audio id="Loud" autoplay>
+  <source src="audio/Loud.mp3" type="audio/mpeg">
+</audio>		
+	
+	<script>
+	var track = document.getElementById("Loud");
+track.volume = 0.1;
+		
+function pauseTrack() { 
+	
+	  if(!track.paused) {track.pause();}
+  else {track.play();}
+
+}
+	
+	</script>
+	
 	<div id="footercolor">
+		<img src="imges/typer.gif" id="thetyper">
+		<img src="imges/cameraman.gif" id="thecamera">
+		<img src="imges/3dance.gif" id="dance3">
+		<img src="imges/violin.gif" id="violin">
+	<img src="imges/3dance.gif" id="dance4">
+		<img src="imges/writer.gif" id="writer">
 	<img src="imges/la.svg" id="cityofla">
 	
 	</div>
