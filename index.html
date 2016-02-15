@@ -23,6 +23,14 @@ var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async
 ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
 var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
 })();
+	
+			
+function myFunction() { 
+
+	alert("test");
+	
+}
+	
 </script>
 		
 		<style>
@@ -223,9 +231,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000108', end
 /* ANIMATIONS */
 
 .x1 {
-	-webkit-animation: animateCloud 35s linear infinite;
-	-moz-animation: animateCloud 35s linear infinite;
-	animation: animateCloud 35s linear infinite;
+	-webkit-animation: animateCloud 65s linear infinite;
+	-moz-animation: animateCloud 65s linear infinite;
+	animation: animateCloud 65s linear infinite;
 	
 	-webkit-transform: scale(0.65);
 	-moz-transform: scale(0.65);
@@ -233,9 +241,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000108', end
 }
 
 .x2 {
-	-webkit-animation: animateCloud 20s linear infinite;
-	-moz-animation: animateCloud 20s linear infinite;
-	animation: animateCloud 20s linear infinite;
+	-webkit-animation: animateCloud 50s linear infinite;
+	-moz-animation: animateCloud 50s linear infinite;
+	animation: animateCloud 50s linear infinite;
 	
 	-webkit-transform: scale(0.3);
 	-moz-transform: scale(0.3);
@@ -243,9 +251,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000108', end
 }
 
 .x3 {
-	-webkit-animation: animateCloud 30s linear infinite;
-	-moz-animation: animateCloud 30s linear infinite;
-	animation: animateCloud 30s linear infinite;
+	-webkit-animation: animateCloud 60s linear infinite;
+	-moz-animation: animateCloud 60s linear infinite;
+	animation: animateCloud 60s linear infinite;
 	
 	-webkit-transform: scale(0.5);
 	-moz-transform: scale(0.5);
@@ -253,9 +261,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000108', end
 }
 
 .x4 {
-	-webkit-animation: animateCloud 18s linear infinite;
-	-moz-animation: animateCloud 18s linear infinite;
-	animation: animateCloud 18s linear infinite;
+	-webkit-animation: animateCloud 48s linear infinite;
+	-moz-animation: animateCloud 48s linear infinite;
+	animation: animateCloud 48s linear infinite;
 	
 	-webkit-transform: scale(0.4);
 	-moz-transform: scale(0.4);
@@ -263,9 +271,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000108', end
 }
 
 .x5 {
-	-webkit-animation: animateCloud 25s linear infinite;
-	-moz-animation: animateCloud 25s linear infinite;
-	animation: animateCloud 25s linear infinite;
+	-webkit-animation: animateCloud 55s linear infinite;
+	-moz-animation: animateCloud 55s linear infinite;
+	animation: animateCloud 55s linear infinite;
 	
 	-webkit-transform: scale(0.55);
 	-moz-transform: scale(0.55);
@@ -699,7 +707,7 @@ function pauseTrack() {
 				<button class="cn-button" id="cn-button">+</button>
 				<div class="cn-wrapper" id="cn-wrapper">
 				    <ul>
-				      <li><a href="#"><span class="icon-picture"></span></a></li>
+				      <li><a href="#" onclick="myFunction()"><span class="icon-picture"></span></a></li>
 				      <li><a href="#"><span class="icon-headphones"></span></a></li>
 				      <li><a href="#"><span class="icon-home"></span></a></li>
 				      <li><a href="#"><span class="icon-facetime-video"></span></a></li>
