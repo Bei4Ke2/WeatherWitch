@@ -24,16 +24,95 @@ ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www')
 var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
 })();
 	
-			
-function myFunction() { 
+	function homeDecor () 
+	
+	{
+		
+  var elem = document.getElementById("thehouse"); 
+	elem.style.bottom="0px"
+	elem.style.left="250px";
+elem.style.position="fixed";
+	elem.style.width="350px";
+	elem.style.height="197px";
+		elem.style.zIndex="10";	
 
-	alert("test");
+	}
 	
-}
 	
+// function myFunction() { 
+
+	
+// 	var x = document.getElementById("newdoor");   
+	
+// 	var lh = document.getElementById("lefthouse");   
+// 	var rh = document.getElementById("righthouse");  
+// 	var cla = document.getElementById("cityofla");
+// 		var cg = document.getElementById("cloudsGroup");
+// 		var canV = document.getElementById("canvas");
+// 		var moN = document.getElementById("themoon");
+	
+	
+// 	function toggle(displayState){
+//    var delle = document.getElementsByClassName("vamos");
+
+//     for (var i = 0; i < delle.length; i++){
+//         delle[i].style.display = displayState;
+//     }
+// }
+
+// toggle('none'); // hides
+	
+	
+// 	lh.style.display = "none"; 
+// 	rh.style.display = "none";
+// 	cla.style.display = "none";
+// 	cg.style.display = "none";
+// 	canV.style.display = "none";
+// 	moN.style.display = "none";
+
+	
+//   var elem = document.getElementById("thehouse"); 
+	
+// 	elem.style.right="-3400px";
+// elem.style.left="inherit";
+// 	elem.style.width="800%";
+// 	elem.style.height="inherit";
+// 	elem.style.zIndex="10";
+	
+
+	
+// 		document.getElementById('newdoor').setAttribute("d","M 598.059243132 856.35308019C598.059243132 856.35308019 672.810532708 860.898770165 672.810532708 860.898770165C672.810532708 860.898770165 672.810532708 974.540929854 672.810532708 974.540929854C672.810532708 974.540929854 598.059243132 978.581539831 598.059243132 978.581539831C598.059243132 978.581539831 598.059243132 856.35308019 598.059243132 856.35308019");
+
+// 		document.getElementById('newdoor').setAttribute("d","m 598.05924,856.35308 66.67007,7.07107 0,107.07617 -66.67007,8.08122 0,-122.22846");
+
+// 		document.getElementById('newdoor').setAttribute("d","m 598.05924,856.35308 50.00255,14.14214 0,94.44926 -50.00255,13.63706 0,-122.22846");
+
+// 		document.getElementById('newdoor').setAttribute("d","m 598.05924,856.35308 29.29443,21.71828 -10e-6,76.77159 -29.29442,23.73859 0,-122.22846");
+
+// 		document.getElementById('newdoor').setAttribute("d","m 598.05924,856.35308 13.13199,31.81981 -10e-6,54.54823 -13.13198,35.86042 0,-122.22846");
+
+	
+// }
+
 </script>
 		
 		<style>
+			img#dooranim {
+    position: fixed;
+    bottom: 0;
+    left: 450px;
+				width:30px;
+				z-index:20;
+}
+			
+						img#doorstill {
+    position: fixed;
+    bottom: 0;
+    left: 450px;
+				width:30px;
+								z-index:27;
+}
+			
 			
 		
 		#footercolor{width: 100%;
@@ -98,12 +177,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000108', end
 		color: #5CA4A9;}
 
 #cityofla{bottom:0; position:fixed; right:0;}
-	svg#thehouse{    bottom: 0;
-    position: fixed;
-    left: 250px;
-    width: 350px;
-    /* z-index: 10; */
-    height: 197px;}
+
 	
 	img#thetyper {
     bottom: 8px;
@@ -111,6 +185,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000108', end
     left: 368px;
     width: 20px;
       opacity: .1;
+			z-index:20;
 }
 	
 		img#thecamera {
@@ -119,6 +194,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000108', end
     left: 368px;
     width: 40px;
        opacity: .1;
+				z-index:20;
 }
 	
 			img#writer {
@@ -127,6 +203,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000108', end
     left: 416px;
     width: 23px;
      opacity: .1;
+					z-index:20;
 }
 	
 			img#dance3 {
@@ -135,6 +212,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000108', end
     left: 420px;
     width: 40px;
         opacity: .1;
+					z-index:20;
 }
 				img#dance4 {
     bottom: 52px;
@@ -142,6 +220,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000108', end
     left: 454px;
     width: 40px;
        opacity: .1;
+					z-index:20;
 }
 	
 	
@@ -151,6 +230,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000108', end
     left: 440px;
     width: 40px;
       opacity: .1;
+					z-index:20;
 }
 	
 	
@@ -187,6 +267,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000108', end
     z-index: 3;
     
 }
+			
+	
+			
 
 			
 #background-wrap {
@@ -337,7 +420,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000108', end
 		</style>
 
 	</head>
-	<body>
+	<body  onload="homeDecor()">
 		<div class="container">
 		
 		<img src="imges/moon.png" id="themoon">
@@ -664,27 +747,111 @@ function drawHand(ctx, pos, length, width) {
        height="97.14286"
        x="490"
        y="858.07648" />
+<!--  <rect
+       style="opacity:1;fill:#6c5353;stroke:none;stroke-width:1.39999998;stroke-miterlimit:4;stroke-dasharray:none"
+       id="newdoor"
+       width="77"
+       height="121"
+       x="598"
+       y="857" />  -->
+		
+
+		
+		<path
+       id="newdoor"
+       d="M598.059242991 856.35308C598.059242991 856.35308 674.830842991 856.35308 674.830842991 856.35308C674.830842991 856.35308 674.830842991 978.58154 674.830842991 978.58154C674.830842991 978.58154 598.059242991 978.58154 598.059242991 978.58154C598.059242991 978.58154 598.059242991 856.35308 598.059242991 856.35308"
+       style="opacity:1;fill:#6c5353;stroke:none;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none" />
+		
+		
   </g>
 </svg>
 
 		
 		<!--the end-->
-	
+<!-- 			<img src="images/doorstill.gif" id="doorstill" >
+	<img src="images/dooranim.gif" id="dooranim"> -->
 	<img src="imges/righthouses.png" id="righthouse">
 	
-				<img src="imges/typer.gif" id="thetyper">
-		<img src="imges/cameraman.gif" id="thecamera">
-		<img src="imges/3dance.gif" id="dance3">
-		<img src="imges/violin.gif" id="violin">
-	<img src="imges/3dance.gif" id="dance4">
-		<img src="imges/writer.gif" id="writer">
-	<img src="imges/la.svg" id="cityofla">
+				<img src="imges/typer.gif" id="thetyper" class="vamos">
+		<img src="imges/cameraman.gif" id="thecamera" class="vamos">
+		<img src="imges/3dance.gif" id="dance3" class="vamos">
+		<img src="imges/violin.gif" id="violin" class="vamos">
+	<img src="imges/3dance.gif" id="dance4" class="vamos">
+		<img src="imges/writer.gif" id="writer" class="vamos">
+	<img src="imges/la.svg" id="cityofla" class="vamos">
 		
+</div>
+			
+			
+			
 <audio id="Loud" autoplay>
   <source src="audio/Loud.mp3" type="audio/mpeg">
 </audio>		
 	
 	<script>
+		function myMove() {
+  var elem = document.getElementById("thehouse");  
+			
+			elem.style.height = "inherit";
+  var widthK = 26;
+var leftK = 18;
+			
+  var id = setInterval(frame, 3);
+  function frame() {
+		if (widthK >= 1400) {
+       clearInterval(id);
+// 			rightK++;
+// 			elem.style.right= "-" + "3400" + "px";
+// 			 elem.style.left = leftK + 'px'; 
+			
+			myMover();
+			
+     } 
+		else {
+				leftK = leftK - .3;
+			
+			 elem.style.left = leftK  + '%'; 	
+      widthK = widthK + .5;
+
+      elem.style.width = widthK + '%'; 		
+				
+    }
+			
+  }
+			
+}
+
+			
+		function myMover() {
+	// 			elem.style.height = "inherit";
+//   var widthK = 26;
+// var leftK = 18;
+			var Dvalue = 0;
+			
+			var angles = ["M 598.059243132 856.35308019C598.059243132 856.35308019 672.810532708 860.898770165 672.810532708 860.898770165C672.810532708 860.898770165 672.810532708 974.540929854 672.810532708 974.540929854C672.810532708 974.540929854 598.059243132 978.581539831 598.059243132 978.581539831C598.059243132 978.581539831 598.059243132 856.35308019 598.059243132 856.35308019", "m 598.05924,856.35308 66.67007,7.07107 0,107.07617 -66.67007,8.08122 0,-122.22846", "m 598.05924,856.35308 50.00255,14.14214 0,94.44926 -50.00255,13.63706 0,-122.22846", "m 598.05924,856.35308 29.29443,21.71828 -10e-6,76.77159 -29.29442,23.73859 0,-122.22846", "m 598.05924,856.35308 13.13199,31.81981 -10e-6,54.54823 -13.13198,35.86042 0,-122.22846"]
+  var theRealdoor = document.getElementById("newdoor");  
+			
+  var idf = setInterval(framef, 50);
+  function framef() {
+		if (Dvalue >= 4) {
+       clearInterval(idf);
+			document.getElementById('newdoor').remove();
+// 			rightK++;
+// 			elem.style.right= "-" + "3400" + "px";
+// 			 elem.style.left = leftK + 'px'; 
+     } 
+		else {
+			Dvalue ++;
+		
+			var vans = document.getElementById('newdoor').setAttribute("d", angles[Dvalue]);
+			
+//       elem.style.width = widthK + '%'; 		
+    }
+  }
+}	
+	
+		
+		
 	var track = document.getElementById("Loud");
 track.volume = 0.1;
 		
@@ -708,10 +875,10 @@ function pauseTrack() {
 				<div class="cn-wrapper" id="cn-wrapper">
 				    <ul>
 				      <li><a href="#" onclick="myFunction()"><span class="icon-picture"></span></a></li>
-				      <li><a href="#"><span class="icon-headphones"></span></a></li>
+				      <li><a href="#"><span class="icon-globe" onclick="myMover()"></span></a></li>
 				      <li><a href="#"><span class="icon-home"></span></a></li>
 				      <li><a href="#"><span class="icon-facetime-video"></span></a></li>
-				      <li><a href="#"><span class="icon-envelope-alt"></span></a></li>
+				      <li><a href="#" onclick="myMove()"><span class="icon-envelope-alt"></span></a></li>
 				     </ul>
 				</div>
 				<div id="cn-overlay" class="cn-overlay"></div>
@@ -722,7 +889,7 @@ function pauseTrack() {
 			<script src="js/demo1.js"></script>
 		
 		<script language="Javascript">
-
+	
 // I put everything in the bottom because I wanted to make sure everything in the DOM was loaded first. Created my changing weather variable since I live between cities, and want clients experience to show nearest office. I am using the geoplugin to pull in the lattitude longitude data, and openweather map for the weather information. The numbers in the toggle I found on google instead of downloading the zip on the website, but that was fine.
 
 var weatherToggle = "";
