@@ -8,4 +8,30 @@ setTimeout(document.getElementById('newdoor').setAttribute("d","M 598.059243132 
 			setTimeout(document.getElementById('newdoor').setAttribute("d","m 598.05924,856.35308 13.13199,31.81981 -10e-6,54.54823 -13.13198,35.86042 0,-122.22846"), 30000);
 			setTimeout(document.getElementById('newdoor').remove(), 30000);
 			
+				function myMover() {
+	// 			elem.style.height = "inherit";
+//   var widthK = 26;
+// var leftK = 18;
+			var Dvalue = 0;
+			
+			var angles = ["M 598.059243132 856.35308019C598.059243132 856.35308019 672.810532708 860.898770165 672.810532708 860.898770165C672.810532708 860.898770165 672.810532708 974.540929854 672.810532708 974.540929854C672.810532708 974.540929854 598.059243132 978.581539831 598.059243132 978.581539831C598.059243132 978.581539831 598.059243132 856.35308019 598.059243132 856.35308019", "m 598.05924,856.35308 66.67007,7.07107 0,107.07617 -66.67007,8.08122 0,-122.22846", "m 598.05924,856.35308 50.00255,14.14214 0,94.44926 -50.00255,13.63706 0,-122.22846", "m 598.05924,856.35308 29.29443,21.71828 -10e-6,76.77159 -29.29442,23.73859 0,-122.22846", "m 598.05924,856.35308 13.13199,31.81981 -10e-6,54.54823 -13.13198,35.86042 0,-122.22846"]
+  var theRealdoor = document.getElementById("newdoor");  
+			alert("yyyy");
+  var idf = setInterval(framef, 50);
+  function framef() {
+		if (Dvalue >= 4) {
+       clearInterval(idf);
+			document.getElementById('newdoor').remove();
+// 			rightK++;
+// 			elem.style.right= "-" + "3400" + "px";
+// 			 elem.style.left = leftK + 'px'; 
+     } 
+		else {
+			Dvalue ++;
 		
+			var vans = document.getElementById('newdoor').setAttribute("d", angles[Dvalue]);
+			
+//       elem.style.width = widthK + '%'; 		
+    }
+  }
+}	
